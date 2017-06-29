@@ -4,7 +4,5 @@ angular.module('app').controller('mainCtrl', ['$rootScope', 'contentData', funct
 	
 	$rootScope.lang = 'ua';
 
-	this.tourTitle = contentData.tourTitle;
-	this.tourSlogan = contentData.tourSlogan;
-
+	this.c = contentData.content;
 }]);

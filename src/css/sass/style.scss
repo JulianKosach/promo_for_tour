@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Jura:400,700&subset=cyrillic,cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic');
 
-$fontfamily: 'Jura', "Open Sans", sans-serif;
-$afont: 'Jura', "Open Sans", sans-serif;
+$fontfamily: 'Poiret One', cursive, "Open Sans", sans-serif;
+$afont: 'Poiret One', cursive, "Open Sans", sans-serif;
 
 @mixin ibw {
     text-align: center;
@@ -78,6 +78,8 @@ a {
 
 button, input, textarea {
     outline: none;
+    border: none;
+    background-color: transparent;
 }
 
 section {
@@ -97,7 +99,7 @@ header {
     z-index: 50;
     padding: 15px 0;
     width: 100%;
-    background-color: rgba(5, 40, 40, 0.75);
+    // background-color: rgba(5, 40, 40, 0.75);
     .logo {
         background-image: url(../img/logo.png);
         background-size: 100% auto;
@@ -140,11 +142,22 @@ header {
 
 
 
+.more {
+    display: block;
+    margin: 90px auto 0;
+    font-size: 2rem;
+}
+
+
 
 .s1 {
     background: url(../img/bg/sinevirbg.jpg);
     background-position: center top;
     padding-top: 100px;
+    height: 112vh;
+    margin-bottom: -12vh;
+    color: #fff;
+    text-align: center;
     canvas {
         position: absolute;
         z-index: 3;
@@ -157,58 +170,56 @@ header {
         position: absolute;
         z-index: 4;
         right: 100%;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border-top: 150px solid transparent;
-        border-right: 0 solid transparent;
-        border-bottom: 0 solid #fff;
-        border-left: 2000px solid #fff;
-    }
-    &:after {
-        position: absolute;
-        z-index: 4;
-        left: 100%;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border-top: 1000px solid transparent;
-        border-right: 2000px solid rgba(0,120,160,0.2);
-        border-bottom: 0 solid transparent;
-        border-left: 0 solid transparent;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #111;
+        opacity: 0.7;
     }
     h1 {
-        display: inline-block;
+        margin-top: 50px;
+        font-size: 2.8rem;
+    }
+    .decor {
         position: relative;
         z-index: 1;
-        top: 300px;
-        left: 100%;
-        width: auto;
-        max-width: 38%;
-        font-size: 2rem;
-        font-weight: 700;
-        padding: 10px 7%;
-        color: #fff;
-        border: 3px solid #fff;
-        margin-top: 10px;
-        background-color: rgba(167,199,238,0.75);
-        clip-path: polygon(6% 0, 99% 0, 96% 100%, 1% 100%);
-        span {
-            font-size: 2.8rem;
+        margin: 50px auto;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+        &:before, &:after {
+            position: absolute;
+            z-index: 2;
+            width: 280px;
+            height: 2px;
+            top: 4px;
+            background-color: #fff;
+        }
+        &:before {
+            right: 25px;
+        }
+        &:after {
+            left: 25px;
         }
     }
     h2 {
-        position: absolute;
-        z-index: 7;
-        left: 0;
-        bottom: 40%;
-        width: 100%;
-        margin-top: 270px;
-        padding: 20px;
-        font-size: 4rem;
-        font-weight: 700;
-        text-align: left;
-        color: #fff;
-        background-color: rgba(0,0,0,0.35);
+        margin-top: 260px;
+        font-size: 4.8rem;
     }
+    .order_btn {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 20px;
+        font-size: 3rem;
+        border: 2px solid #fff;
+    }
+}
+
+
+.s2 {
+    z-index: 3;
+    clip-path: polygon(0 0, 70% 12vh, 100% 7vh, 100% 100%, 0 100%);
+    background-image: url(../img/bg/muk-zamok.jpg);
 }

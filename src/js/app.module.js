@@ -2,6 +2,5 @@
 
 // Define the 'app' module
 angular.module('app', [
-  'ngAnimate',
-  'ngRoute'
+  'ngAnimate'
 ]); 

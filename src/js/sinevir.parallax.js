@@ -64,7 +64,7 @@ var canvas = document.getElementById('sinevir'),
             w: 75,
             h: 88.8,
             x: -350,
-            y: 150
+            y: 200
         }
     ];
 
@@ -190,13 +190,13 @@ var render = function () {
 
     var pos = canvas.getBoundingClientRect();
     var centr_x = canvas.width/2 + pos.left;
-    var centr_y = canvas.height/2 + canvas.offsetTop;
+    var centr_y = canvas.height*0.7;
 
     [].forEach.call(backgrounds,function(background){
         background.x = background.xs + (centr_x-Mouse.x)*background.k;
-        background.y = background.ys + (centr_y-Mouse.y)*background.k;
+        background.y = background.ys + (centr_y-Mouse.y)*background.k*0.6;
         if (background.t == 'bg') {
-            background.y = Math.min(Math.abs(background.y), background.ym);
+            background.y = Math.min(background.y, background.ym);
         } else
         if (background.t == 'eagel') {
             background.y = background.ys + (centr_y-Mouse.y)*(-0.15);
