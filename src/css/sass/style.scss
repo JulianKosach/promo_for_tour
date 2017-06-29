@@ -1,3 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Jura:400,700&subset=cyrillic,cyrillic-ext');
+
+$fontfamily: 'Jura', "Open Sans", sans-serif;
+$afont: 'Jura', "Open Sans", sans-serif;
+
+@mixin ibw {
+    text-align: center;
+    font-size: 0;
+
+    & > * {
+        font-size: 1rem;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+@mixin sec {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    min-height: 600px;
+    height: 100vh;
+    background-size: cover !important;
+
+    & > div {
+        position: relative;
+        z-index: 5;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:after, :before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    clear: both; 
+}
+
+sup:after, sup:before, a:after, a:before, br:after, br:before, img:after, img:before, span:after, span:before, table:after, table:before, td:after, td:before, tr:after, tr:before {
+    content: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: 1em;
+    font-weight: inherit;
+    text-align: center;
+    font-family: $afont;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+}
+
 body {
-  
+    font-family: $fontfamily, ;
+    font-weight: 400;
+    color: #000;
+    min-height: 600px;
+    min-width: 980px;
+    position: relative;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: 0 !important;
+}
+
+button, input, textarea {
+    outline: none;
+}
+
+section {
+    @include sec;
+}
+
+.hidden-box {
+    display: none!important;
+}
+
+
+
+
+
+header {
+    position: fixed;
+    z-index: 50;
+    padding: 15px 0;
+    width: 100%;
+    background-color: rgba(5, 40, 40, 0.75);
+    .logo {
+        background-image: url(../img/logo.png);
+        background-size: 100% auto;
+        background-position: center;
+        height: 50px;
+    }
+    ul {
+        list-style: none;
+    }
+
+
+    .lang-col {
+        padding: 15px 0;
+        text-align: right;
+    }
+    .lang {
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        height: 20px;
+        line-height: 20px;
+        vertical-align: top;
+    }
+    .lang-btn {
+        width: 30px;
+        height: 20px;
+        background-color: transparent;
+        background-size: 100% auto;
+        background-position: center;
+        border: none;
+        margin: 0 3px;
+    }
+    .ua-btn {
+        background-image: url(../img/lang/ua.png);
+    }
+    .ru-btn {
+        background-image: url(../img/lang/ru.png);
+    }
+}
+
+
+
+
+.s1 {
+    background: url(../img/bg/sinevirbg.jpg);
+    background-position: center top;
+    padding-top: 100px;
+    canvas {
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &:before {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-top: 100px solid transparent;
+        border-right: 0 solid transparent;
+        border-bottom: 0 solid #fff;
+        border-left: 980px solid #fff;
+    }
+    &:after {
+        position: absolute;
+        z-index: 4;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-top: 80px solid transparent;
+        border-right: 320px solid rgba(0,120,160,0.2);
+        border-bottom: 0 solid transparent;
+        border-left: 0 solid transparent;
+    }
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        span {
+            font-size: 3rem;
+        }
+    }
+    h2 {
+        margin-top: 180px;
+        padding: 20px 0;
+        font-size: 32px;
+        font-weight: 700;
+        text-align: left;
+        background-color: rgba(255,255,255,0.7);
+    }
 }

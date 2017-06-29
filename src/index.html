@@ -5,12 +5,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title data-ng-if="lang == 'ua'">Тур "10 родзинок Закарпаття"</title>
-	<title data-ng-if="lang == 'ru'">Тур "10 изюминок Закарпатья"</title>
-	<title data-ng-if="lang == 'eng'">Tour "10 highlights of Transcarpathia"</title>
+	<title data-ng-if="lang == 'ua'">Квитки на тур "10 родзинок Закарпаття"</title>
+	<title data-ng-if="lang == 'ru'">Билеты на тур "10 изюминок Закарпатья"</title>
 
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
+
+	<link rel="stylesheet" href="css/normalize.min.css">
 	<!-- START Bootstrap -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,21 +20,27 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<!-- END Bootstrap -->
-
-
-	<script src="http://localhost:7380/livereload.js"></script>
-
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="css/style.css">
+
+	<script src="http://localhost:7380/livereload.js"></script>
 </head>
 <body>
 
-<!-- 	<header>
+	<header>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-8 col-xs-12"><h1><span class="glyphicon glyphicon-headphones"></span> Simple Music Library</h1></div>
-				<div class="col-sm-4 col-xs-12">
-					<a href="#!/albums/add" class="btn navbar-right btn-primary btn-add">Add new album &nbsp; <span class="glyphicon glyphicon-cd"></span></a>
+				<div class="col-md-2 logo"></div>
+				<ul class="col-md-8">
+					<li>
+						<a href="#s1">{{}}</a>
+					</li>
+				</ul>
+				<div class="col-md-2 lang-col">
+					<span class="lang">{{lang}} | </span>
+					<button class="lang-btn ua-btn" data-ng-click="lang = 'ua'" title="Українська"></button>
+					<button class="lang-btn ru-btn" data-ng-click="lang = 'ru'" title="Русский"></button>
 				</div>
 			</div>
 		</div>
@@ -41,19 +48,37 @@
 
 
 	<main>
-		<div class="container">
-			<div class="view-container">
-		    	<div ng-view class="view-frame"></div>
-		    </div>
-		</div>
+
+		<section class="s1" id="s1">
+			<canvas id="sinevir" width="100%" height="100%"></canvas>
+			<div>
+				<h1>Тур <span>{{mainCtrl.tourTitle[lang]}}</span></h1>
+				<!-- <h2><div class="container">{{mainCtrl.tourSlogan[lang]}}</div></h2> -->
+			</div>
+		</section>
+
+		<section class="s2" id="s2">
+
+		</section>
+
 	</main>
 
 
 	<footer>
 		<div class="container">
-			<h3><span class="glyphicon glyphicon-user"></span> Made by Julian Kosach</h3>
+			<!-- <h3><span class="glyphicon glyphicon-user"></span> Made by Julian Kosach</h3> -->
 		</div>
-	</footer> -->
+	</footer>
+
+	<div class="hidden-box">
+		<img id="sinevir_bg" src="img/bg/sinevir/sinevir.jpg" alt="sinevir">
+		<img id="without_sky" src="img/bg/sinevir/without_sky.png" alt="sinevir">
+		<img id="sky" src="img/bg/sinevir/sky.png" alt="sinevir">
+		<img id="bg_mount" src="img/bg/sinevir/background_mountains.png" alt="sinevir">
+		<img id="middle" src="img/bg/sinevir/middle.png" alt="sinevir">
+		<img id="first" src="img/bg/sinevir/first.png" alt="sinevir">
+		<img id="trees" src="img/bg/sinevir/trees.png" alt="sinevir">
+	</div>
 
 
 
@@ -74,8 +99,12 @@
 	<!-- END AngularJS -->
 
 	<script src="js/app.module.js"></script>
+	<script src="js/content.factory.js"></script>
 
     <script src="js/main.controller.js"></script>
+
+
+    <script src="js/sinevir.parallax.js"></script>
     
 </body>
 </html>
