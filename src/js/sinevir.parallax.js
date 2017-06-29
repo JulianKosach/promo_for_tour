@@ -1,3 +1,17 @@
+'use sctrict';
+
+var sinevir_imgs = '<img id="without_sky" src="img/bg/sinevir/without_sky.png" alt="sinevir">\
+        <img id="sky" src="img/bg/sinevir/sky.png" alt="sinevir">\
+        <img id="bg_mount" src="img/bg/sinevir/background_mountains.png" alt="sinevir">\
+        <img id="middle" src="img/bg/sinevir/middle.png" alt="sinevir">\
+        <img id="first" src="img/bg/sinevir/first.png" alt="sinevir">\
+        <img id="t_fr" src="img/bg/sinevir/t_fr.png" alt="sinevir">\
+        <img id="trees" src="img/bg/sinevir/trees.png" alt="sinevir">\
+        <img id="eagel" src="img/bg/sinevir/eagel.png" alt="sinevir">\
+        <img id="blick" src="img/bg/sinevir/blick.png" alt="sinevir">';
+$('#hidden-box').append(sinevir_imgs);
+
+
 var canvas = document.getElementById('sinevir'),
     ctx = canvas.getContext('2d'),
     backgrounds = [],
@@ -8,18 +22,13 @@ var canvas = document.getElementById('sinevir'),
     },
     backgroundsArr = [
         {
-            id: 'sinevir_bg',
-            k: 0,
-            ym: 100
-        },
-        {
             id: 'without_sky',
             k: -0.01,
             ym: 100
         },
         {
             id: 'sky',
-            k: 0.0,
+            k: 0.02,
             ym: 100
         },
         {
@@ -34,27 +43,27 @@ var canvas = document.getElementById('sinevir'),
         },
         {
             id: 'first',
-            k: 0.07,
+            k: 0.05,
             ym: 150
         },
         {
             id: 't_fr',
-            k: 0.09,
+            k: 0.1,
             ym: 170
         },
         {
             id: 'trees',
             k: 0.14,
-            ym: 200
+            ym: 220
         },
         {
             id: 'eagel',
-            k: 0.2,
+            k: -0.5,
             ym: 250,
             t: 'eagel',
-            w: 62.6,
-            h: 74,
-            x: 150,
+            w: 75,
+            h: 88.8,
+            x: -350,
             y: 150
         }
     ];
@@ -129,6 +138,9 @@ var Background = function (o) {
     } else if (this.t == 'blick') {
         this.x = canvas.width - this.w + o.x;
         this.xs = canvas.width - this.w + o.x;
+    } else if (this.t == 'eagel') {
+        this.x = canvas.width/2 - this.w/2 + o.x;
+        this.xs = canvas.width/2 - this.w/2 + o.x;
     }
 
     this.id = o.id;
@@ -169,6 +181,13 @@ var loop = function (){
 
 var render = function () {
     ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    var my_gradient = ctx.createLinearGradient(0,0,canvas.width,canvas.height);
+    my_gradient.addColorStop(0, '#8bbcf9');
+    my_gradient.addColorStop(1, '#b2cbea');
+    ctx.fillStyle = my_gradient;
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
     var pos = canvas.getBoundingClientRect();
     var centr_x = canvas.width/2 + pos.left;
     var centr_y = canvas.height/2 + canvas.offsetTop;
@@ -178,6 +197,9 @@ var render = function () {
         background.y = background.ys + (centr_y-Mouse.y)*background.k;
         if (background.t == 'bg') {
             background.y = Math.min(Math.abs(background.y), background.ym);
+        } else
+        if (background.t == 'eagel') {
+            background.y = background.ys + (centr_y-Mouse.y)*(-0.15);
         }
         background.draw();
     });
