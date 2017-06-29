@@ -34,13 +34,28 @@ var canvas = document.getElementById('sinevir'),
         },
         {
             id: 'first',
-            k: 0.1,
+            k: 0.07,
             ym: 150
         },
         {
+            id: 't_fr',
+            k: 0.09,
+            ym: 170
+        },
+        {
             id: 'trees',
-            k: 0.2,
+            k: 0.14,
             ym: 200
+        },
+        {
+            id: 'eagel',
+            k: 0.2,
+            ym: 250,
+            t: 'eagel',
+            w: 62.6,
+            h: 74,
+            x: 150,
+            y: 150
         }
     ];
 
@@ -90,26 +105,30 @@ var Mouse = function (el) {
 
 // Background Class https://github.com/lamberta/html5-animation/blob/master/examples/ch05/classes/arrow.js
 var Background = function (o) {
-    this.x = o.x | 0;
-    this.y = o.y | 0;
-    this.xs = o.x | 0;
-    this.ys = o.y | 0;
-    this.w = canvas.width;
-    this.h = canvas.height;
+    this.x = o.x || 0;
+    this.y = o.y || 0;
+    this.xs = o.x || 0;
+    this.ys = o.y || 0;
+    this.w = o.w || canvas.width;
+    this.h = o.h || canvas.height;
     this.k = o.k || 0.01;
     this.ym = o.ym || 150;
+    this.t = o.t || 'bg';
 
-    if (canvas.width*0.625 < canvas.height) {
+    if (canvas.width*0.625 < canvas.height && this.t == 'bg') {
         this.w = canvas.height*1.6*1.1;
         this.h = canvas.height*1.1;
         this.x = -(this.w - canvas.width)/2;
         this.xs = -(this.w - canvas.width)/2;
     } else 
-    if (canvas.width*0.625 > canvas.height) {
+    if (canvas.width*0.625 > canvas.height && this.t == 'bg') {
         this.w = canvas.width*1.1;
         this.h = canvas.width*1.1*0.625;
         this.x = -(this.w - canvas.width)/2;
         this.xs = -(this.w - canvas.width)/2;
+    } else if (this.t == 'blick') {
+        this.x = canvas.width - this.w + o.x;
+        this.xs = canvas.width - this.w + o.x;
     }
 
     this.id = o.id;
@@ -157,7 +176,9 @@ var render = function () {
     [].forEach.call(backgrounds,function(background){
         background.x = background.xs + (centr_x-Mouse.x)*background.k;
         background.y = background.ys + (centr_y-Mouse.y)*background.k;
-        background.y = Math.min(Math.abs(background.y), background.ym);
+        if (background.t == 'bg') {
+            background.y = Math.min(Math.abs(background.y), background.ym);
+        }
         background.draw();
     });
 };
