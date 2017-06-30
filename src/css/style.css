@@ -62,42 +62,41 @@ section {
 @keyframes bounce {
   0% {
     top: 0px; }
-  20% {
+  10% {
     top: -2px; }
-  40% {
+  20% {
     top: 5px; }
-  60% {
+  30% {
     top: -7px; }
-  80% {
+  40% {
     top: 3px; }
+  500% {
+    top: 0px; }
   100% {
     top: 0px; } }
 
 @keyframes borderBounce {
   0% {
     margin: 0 auto;
-    padding: 20px;
-    border-color: #fff; }
-  10% {
-    margin: -5px auto;
-    padding: 25px;
-    border-color: #3eb9ff; }
-  20% {
+    padding: 20px; }
+  40% {
     margin: 0 auto;
-    padding: 20px;
-    border-color: #fff; }
-  80% {
-    margin: 0 auto;
-    padding: 20px;
-    border-color: #fff; }
-  90% {
+    padding: 20px; }
+  45% {
     margin: -5px auto;
-    padding: 25px;
-    border-color: #3eb9ff; }
+    padding: 25px; }
+  50% {
+    margin: 0 auto;
+    padding: 20px; }
+  55% {
+    margin: -5px auto;
+    padding: 25px; }
+  60% {
+    margin: 0 auto;
+    padding: 20px; }
   100% {
     margin: 0 auto;
-    padding: 20px;
-    border-color: #fff; } }
+    padding: 20px; } }
 
 header {
   position: fixed;
@@ -106,14 +105,15 @@ header {
   width: 100%;
   transition: all 0.35s; }
   header.scrolled {
-    background-color: rgba(5, 10, 40, 0.5); }
+    background-color: rgba(5, 10, 40, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75); }
   header .logo {
-    width: 165px;
+    display: inline-block;
+    width: 140px;
     height: 50px;
     background-image: url(../img/logo.png);
     background-size: 100% auto;
-    background-position: center;
-    cursor: pointer; }
+    background-position: center; }
   header .lang-col {
     padding: 10px 0;
     text-align: right; }
@@ -182,7 +182,7 @@ header {
     z-index: 1;
     top: 0;
     left: 0;
-    animation: bounce 1s;
+    animation: bounce 3s;
     animation-iteration-count: infinite; }
   .more:hover, .more:active, .more.active {
     font-size: 2.5rem; }
@@ -202,7 +202,7 @@ header {
     display: inline-block; }
 
 .s1 {
-  background: url(../img/bg/sinevirbg.jpg);
+  background: url(../img/bg/sinevir/sinevir.jpg);
   background-position: center top;
   padding-top: 100px;
   height: 112vh;
@@ -258,7 +258,7 @@ header {
     font-size: 3rem;
     border: 2px solid #fff;
     transition: all 0.35s;
-    animation: borderBounce 1s;
+    animation: borderBounce 3s;
     animation-iteration-count: infinite; }
     .s1 .order-btn:hover, .s1 .order-btn:active, .s1 .order-btn.active {
       transform: rotate(360deg); }
