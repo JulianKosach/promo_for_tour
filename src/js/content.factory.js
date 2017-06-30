@@ -17,7 +17,26 @@ angular.module('app').factory('contentData', ['$rootScope', function($rootScope)
 			moreBtn: {
 				ua: 'Дізнатись більше',
 				ru: 'Узнать больше'
-			}
+			},
+
+			menuItem: {
+				i1: {
+					ua: 'Головна',
+					ru: 'Главная'
+				},
+				i2: {
+					ua: 'section2',
+					ru: 'section2'
+				},
+				i3: {
+					ua: 'section3',
+					ru: 'section3'
+				},
+				i4: {
+					ua: 'section4',
+					ru: 'section4'
+				}
+			},
 
 		}
 	};
