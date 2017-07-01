@@ -6,6 +6,27 @@ function scrollTo(top) {
 
 $(document).ready(function() {
 
+	var detail_slider = $('#s2').find('.bxslider').bxSlider({
+			responsive: true,
+			infiniteLoop: true,
+			controls: false,
+			adaptiveHeight: true,
+			adaptiveHeightSpeed: 200,
+			pager: true,
+			speed: 500,
+			minSlides: 1,
+			maxSlides: 1,
+			moveSlides: 1,
+			slideMargin: 50,
+			touchEnabled: false,
+			onSlideBefore: function($slideElement, oldIndex, newIndex) {
+
+			},
+			onSlideAfter: function($slideElement, oldIndex, newIndex) {
+				
+			}
+		});
+
 	$('.menu-btn').on('click', function(e){
 		e.preventDefault();
 		e.stopPropagation();

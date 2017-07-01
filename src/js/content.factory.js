@@ -25,18 +25,26 @@ angular.module('app').factory('contentData', ['$rootScope', function($rootScope)
 					ru: 'Главная'
 				},
 				i2: {
-					ua: 'section2',
-					ru: 'section2'
+					ua: 'Деталі',
+					ru: 'Подробности'
 				},
 				i3: {
-					ua: 'section3',
-					ru: 'section3'
+					ua: 'Вартість',
+					ru: 'Стоимость'
 				},
 				i4: {
-					ua: 'section4',
-					ru: 'section4'
+					ua: 'Замовити',
+					ru: 'Заказать'
 				}
 			},
+
+			detail: {
+
+			},
+
+			price : {
+
+			}
 
 		}
 	};

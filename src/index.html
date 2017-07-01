@@ -69,8 +69,22 @@
 		</section>
 
 		<section class="s2" id="s2">
-
-				<button class="more go-to" data-go-to="#s3"><i class="fa fa-long-arrow-down" aria-hidden="true"></i> {{MC.c.moreBtn[lang]}}</button>
+			<div class="triangle"></div>
+			<button class="sld-prev"></button>
+			<div class="slider-wrap">
+				<ul class="bxslider">
+					<li class="slide">
+						<p>slide1</p>
+					</li>
+					<li class="slide">
+						<p>slide2</p>
+					</li>
+					<li class="slide">
+						<p>slide3</p>
+					</li>
+				</ul>
+			</div>
+			<button class="sld-next"></button>
 		</section>
 
 		<section class="s3" id="s3">
@@ -107,9 +121,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- END Bootstrap -->
 
-	<script src="js/libs/underscore-min.js"></script>
-
-	<script src="js/main.js"></script>
+	<script src="js/libs/jquery.bxslider.min.js"></script>
+	<script src="js/libs/jquery.arcticmodal.min.js"></script>
 
 	<!-- START AngularJS -->
 	<script src="js/libs/angular.min.js"></script>
@@ -126,6 +139,8 @@
 	
     <script src="js/sinevir.parallax.js"></script>
     <script src="js/dom.parallax.js"></script>
+
+	<script src="js/main.js"></script>
     
 </body>
 </html>

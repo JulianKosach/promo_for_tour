@@ -25,7 +25,7 @@ $afont: 'Poiret One', cursive, "Open Sans", sans-serif;
 
     & > div {
         position: relative;
-        z-index: 5;
+        z-index: 6;
         height: 100%;
         margin: 0 auto;
     }
@@ -79,10 +79,6 @@ button, input, textarea {
     outline: none;
     border: none;
     background-color: transparent;
-}
-
-section {
-    @include sec;
 }
 
 .hidden-box {
@@ -198,7 +194,7 @@ header {
         &:hover, &:active, &.active {
             &:before {
                 width: 65%;
-                background-color: #3eb9ff;
+                background-color: #b400ff;
             }
         }
     }
@@ -244,6 +240,7 @@ header {
 
 
 .s1 {
+    @include sec;
     background: url(../img/bg/sinevir/sinevir.jpg);
     background-position: center top;
     padding-top: 100px;
@@ -262,7 +259,6 @@ header {
     &:before {
         position: absolute;
         z-index: 4;
-        right: 100%;
         top: 0;
         left: 0;
         width: 100%;
@@ -306,7 +302,7 @@ header {
         margin: 0 auto;
         padding: 20px;
         font-size: 3rem;
-        border: 2px solid #fff;
+        border: 2px solid #b400ff;
         transition: all 0.35s;
         animation: borderBounce 3s;
         animation-iteration-count: infinite;
@@ -318,9 +314,86 @@ header {
 
 
 .s2 {
+    position: relative;
     z-index: 3;
-    clip-path: polygon(0 0, 70% 12vh, 100% 7vh, 100% 100%, 0 100%);
-    background-image: url(../img/bg/muk-zamok.jpg);
+    clip-path: polygon(0 0, 65% 12vh, 100% 8vh, 100% 100%, 0 100%);
+    background-color: #bdada5;
+    // background-image: url(../img/bg/pine.png);
+    // background-size: 40% auto;
+    // background-repeat: no-repeat;
+    // background-position: -10% 98%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    .triangle {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 70px;
+        background-color: #b400ff;
+        opacity: 0.4;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    .bx-pager {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 8;
+        bottom: 40px;
+        left: 0;
+        text-align: center;
+        .bx-pager-item {
+            display: inline-block;
+            width: 40px;
+            height: 30px;
+            font-size: 0;
+            padding: 10px;
+            a {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                border: 4px solid #b400ff;
+                transition: all 0.35s;
+                &:hover, &:active, &.active {
+                    border: 4px solid #fff;
+                }
+            }
+        }
+
+    }
+    .sld-prev, .sld-next {
+        position: absolute;
+        z-index: 10;
+        width: 60px;
+        height: 100%;
+        top: 0;
+        opacity: 0;
+        transition: all 0.35s;
+        a {
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+        }
+        &:hover, &:active {
+            opacity: 1;
+        }
+    }
+
+    .bxslider {
+        list-style: none;
+        width: 100%;
+    }
+    .slide {
+        display: block;
+        width: 100%;
+        min-height: 100vh;
+        padding: 15vh 20px 100px;
+        background-color: rgba(0,0,0,0.4);
+    }
 }
 
 
@@ -388,7 +461,7 @@ header {
     }
     .s1 {
         h2 {
-            margin-top: 150px;
+            margin-top: 170px;
         }
         .decor {
             margin: 40px auto;
@@ -430,9 +503,10 @@ header {
         }
     }
     .s1 {
+        padding-top: 70px;
         h2 {
             font-size: 4rem;
-            margin-top: 160px;
+            margin-top: 80px;
         }
         .decor {
             margin: 35px auto;
@@ -450,6 +524,8 @@ header {
             &:after {
                 left: 20px;
             }
+        }.more {
+            margin: 40px auto 0;
         }
     }
 }
