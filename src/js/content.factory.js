@@ -39,7 +39,20 @@ angular.module('app').factory('contentData', ['$rootScope', function($rootScope)
 			},
 
 			detail: {
-
+				s1: {
+					title: {
+						ua: 'Тривалість туру',
+						ru: 'Длительность тура'
+					},
+					days: {
+						ua: '3 дні',
+						ru: '3 дня'
+					},
+					nights: {
+						ua: '2 ночі',
+						ru: '2 ночи'
+					}
+				}
 			},
 
 			price : {

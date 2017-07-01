@@ -9,21 +9,22 @@ $(document).ready(function() {
 	var detail_slider = $('#s2').find('.bxslider').bxSlider({
 			responsive: true,
 			infiniteLoop: true,
-			controls: false,
+			controls: true,
 			adaptiveHeight: true,
 			adaptiveHeightSpeed: 200,
 			pager: true,
-			speed: 500,
+			speed: 600,
 			minSlides: 1,
 			maxSlides: 1,
 			moveSlides: 1,
-			slideMargin: 50,
+			slideMargin: 0,
 			touchEnabled: false,
+			auto: true,
 			onSlideBefore: function($slideElement, oldIndex, newIndex) {
-
+				$('#s2').find('.slide').removeClass('active');
 			},
 			onSlideAfter: function($slideElement, oldIndex, newIndex) {
-				
+				$slideElement.addClass('active');
 			}
 		});
 
