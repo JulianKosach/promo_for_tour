@@ -350,7 +350,7 @@ header {
     width: 100%;
     min-height: 100vh;
     padding: 15vh 20px 100px;
-    background-color: #fff;
+    background-color: #555;
     overflow: hidden; }
   .s2 .sld-1 {
     position: relative;
@@ -464,72 +464,98 @@ header {
       color: #fff;
       text-align: center;
       transition: all 0.5s; }
+  .s2 .event1 {
+    z-index: 1;
+    top: 20px;
+    left: 30px; }
+    .s2 .event1 h3 {
+      top: 100%;
+      left: 100%;
+      margin: 1px -3px; }
+    .s2 .event1 .info {
+      top: 100%;
+      left: 100%; }
+    .s2 .event1 .time {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0; }
+  .s2 .event2 {
+    z-index: 3;
+    top: 10px;
+    left: -20px; }
+    .s2 .event2 h3 {
+      top: 100%;
+      left: 0;
+      margin: -2px 3px;
+      color: #efcfff; }
+    .s2 .event2 .info {
+      top: 100%;
+      left: -100%; }
+  .s2 .event3 {
+    z-index: 4;
+    top: -10px;
+    left: 20px; }
+    .s2 .event3 h3 {
+      top: 0;
+      left: 100%;
+      margin: 4px 2px;
+      color: #efcfff; }
+    .s2 .event3 .info {
+      top: 0;
+      left: 100%; }
+  .s2 .event4 {
+    z-index: 2;
+    top: -20px;
+    left: -40px; }
+    .s2 .event4 h3 {
+      top: 0;
+      left: 0;
+      margin: 3px 6px; }
+    .s2 .event4 .info {
+      top: 0;
+      left: -100%; }
+    .s2 .event4 .time {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      right: 0; }
+  .s2 .slide.active .event {
+    top: 0;
+    left: 0; }
+    .s2 .slide.active .event .info {
+      top: 50%;
+      left: 5%; }
+  .s2 .day-1 {
+    padding: 0; }
+    .s2 .day-1 .event1 {
+      background-image: url(../img/day1/shenborn.jpg); }
+    .s2 .day-1 .event2 {
+      background-image: url(../img/day1/castle.jpg); }
+    .s2 .day-1 .event3 {
+      background-image: url(../img/day1/term.jpg); }
+    .s2 .day-1 .event4 {
+      background-image: url(../img/day1/house.jpg); }
   .s2 .day-2 {
     padding: 0; }
     .s2 .day-2 .event1 {
-      z-index: 1;
-      top: 20px;
-      left: 30px;
-      background-image: url(../img/day1/breakfast.jpg); }
-      .s2 .day-2 .event1 h3 {
-        top: 100%;
-        left: 100%;
-        margin: 1px -3px; }
-      .s2 .day-2 .event1 .info {
-        top: 100%;
-        left: 100%; }
-      .s2 .day-2 .event1 .time {
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0; }
+      background-image: url(../img/day2/breakfast.jpg); }
     .s2 .day-2 .event2 {
-      z-index: 3;
-      top: 10px;
-      left: -20px;
-      background-image: url(../img/day1/castle.jpg); }
-      .s2 .day-2 .event2 h3 {
-        top: 100%;
-        left: 0;
-        margin: -2px 3px; }
-      .s2 .day-2 .event2 .info {
-        top: 100%;
-        left: -100%; }
+      background-image: url(../img/day2/castle.jpg); }
     .s2 .day-2 .event3 {
-      z-index: 4;
-      top: -10px;
-      left: 20px;
-      background-image: url(../img/day1/chan.jpg); }
-      .s2 .day-2 .event3 h3 {
-        top: 0;
-        left: 100%;
-        margin: 4px 2px; }
-      .s2 .day-2 .event3 .info {
-        top: 0;
-        left: 100%; }
+      background-image: url(../img/day2/chan.jpg); }
     .s2 .day-2 .event4 {
-      z-index: 2;
-      top: -20px;
-      left: -40px;
-      background-image: url(../img/day1/home.jpg); }
-      .s2 .day-2 .event4 h3 {
-        top: 0;
-        left: 0;
-        margin: 3px 6px; }
-      .s2 .day-2 .event4 .info {
-        top: 0;
-        left: -100%; }
-      .s2 .day-2 .event4 .time {
-        position: absolute;
-        z-index: 2;
-        bottom: 0;
-        right: 0; }
-    .s2 .day-2.active .event {
-      top: 0;
-      left: 0; }
-      .s2 .day-2.active .event .info {
-        top: 50%;
-        left: 5%; }
+      background-image: url(../img/day2/home.jpg); }
+  .s2 .day-3 {
+    padding: 0; }
+    .s2 .day-3 .event1 {
+      background-image: url(../img/day3/food.jpg); }
+    .s2 .day-3 .event2 {
+      background-image: url(../img/day3/cheese.jpg); }
+    .s2 .day-3 .event3 {
+      background-image: url(../img/day3/sinevir.jpg); }
+    .s2 .day-3 .event4 {
+      background-image: url(../img/day3/waterfall.jpg); }
 
 @media screen and (max-width: 991px) {
   html {

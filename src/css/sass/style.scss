@@ -415,7 +415,7 @@ header {
         width: 100%;
         min-height: 100vh;
         padding: 15vh 20px 100px;
-        background-color: #fff;
+        background-color: #555;
         overflow: hidden;
     }
 
@@ -555,13 +555,10 @@ header {
                 transition: all 0.5s;
             }
         }
-    .day-2 {
-        padding: 0;
         .event1 {
             z-index: 1;
             top: 20px;
             left: 30px;
-            background-image: url(../img/day1/breakfast.jpg);
             h3 {
                 top: 100%;
                 left: 100%;
@@ -582,11 +579,11 @@ header {
             z-index: 3;
             top: 10px;
             left: -20px;
-            background-image: url(../img/day1/castle.jpg);
             h3 {
                 top: 100%;
                 left: 0;
                 margin: -2px 3px;
+                color: #efcfff;
             }
             .info {
                 top: 100%;
@@ -597,11 +594,11 @@ header {
             z-index: 4;
             top: -10px;
             left: 20px;
-            background-image: url(../img/day1/chan.jpg);
             h3 {
                 top: 0;
                 left: 100%;
                 margin: 4px 2px;
+                color: #efcfff;
             }
             .info {
                 top: 0;
@@ -612,7 +609,6 @@ header {
             z-index: 2;
             top: -20px;
             left: -40px;
-            background-image: url(../img/day1/home.jpg);
             h3 {
                 top: 0;
                 left: 0;
@@ -629,15 +625,61 @@ header {
                 right: 0;
             }
         }
-        &.active {
-            .event {
-                top: 0;
-                left: 0;
-                .info {
-                    top: 50%;
-                    left: 5%;
-                }
+
+        
+    .slide.active {
+        .event {
+            top: 0;
+            left: 0;
+            .info {
+                top: 50%;
+                left: 5%;
             }
+        }
+    }
+    .day-1 {
+        padding: 0;
+        .event1 {
+            background-image: url(../img/day1/shenborn.jpg);
+        }
+        .event2 {
+            background-image: url(../img/day1/castle.jpg);
+        }
+        .event3 {
+            background-image: url(../img/day1/term.jpg);
+        }
+        .event4 {
+            background-image: url(../img/day1/house.jpg);
+        }
+    }
+    .day-2 {
+        padding: 0;
+        .event1 {
+            background-image: url(../img/day2/breakfast.jpg);
+        }
+        .event2 {
+            background-image: url(../img/day2/castle.jpg);
+        }
+        .event3 {
+            background-image: url(../img/day2/chan.jpg);
+        }
+        .event4 {
+            background-image: url(../img/day2/home.jpg);
+        }
+    }
+    .day-3 {
+        padding: 0;
+        .event1 {
+            background-image: url(../img/day3/food.jpg);
+        }
+        .event2 {
+            background-image: url(../img/day3/cheese.jpg);
+        }
+        .event3 {
+            background-image: url(../img/day3/sinevir.jpg);
+        }
+        .event4 {
+            background-image: url(../img/day3/waterfall.jpg);
         }
     }
 }
