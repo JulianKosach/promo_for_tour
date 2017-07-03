@@ -350,6 +350,7 @@ header {
     width: 100%;
     min-height: 100vh;
     padding: 15vh 20px 100px;
+    background-color: #fff;
     overflow: hidden; }
   .s2 .sld-1 {
     position: relative;
@@ -406,6 +407,129 @@ header {
       width: 55%; }
     .s2 .sld-1.active p {
       left: 50%; }
+  .s2 .event {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50vh;
+    overflow: hidden;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s; }
+    .s2 .event.open-detail {
+      cursor: pointer; }
+      .s2 .event.open-detail:hover:before, .s2 .event.open-detail:active:before, .s2 .event.open-detail.active:before {
+        opacity: 0.2; }
+    .s2 .event:before {
+      width: 120%;
+      height: 120%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      opacity: 0.6;
+      transition: all 0.25s; }
+    .s2 .event h3 {
+      position: absolute;
+      z-index: 3;
+      width: 200%;
+      font-size: 20rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
+      color: #fff;
+      transform: translate3d(-50%, -50%, 0);
+      opacity: 0.6;
+      margin: 0;
+      transition: all 0.25s; }
+    .s2 .event .time {
+      display: inline-block;
+      width: auto;
+      padding: 30px;
+      font-size: 3rem;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.1);
+      margin: 0; }
+    .s2 .event .info {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      z-index: 3;
+      width: 90%;
+      height: auto;
+      transform: translate3d(0, -50%, 0);
+      font-size: 5rem;
+      color: #fff;
+      text-align: center;
+      transition: all 0.5s; }
+  .s2 .day-2 {
+    padding: 0; }
+    .s2 .day-2 .event1 {
+      z-index: 1;
+      top: 20px;
+      left: 30px;
+      background-image: url(../img/day1/breakfast.jpg); }
+      .s2 .day-2 .event1 h3 {
+        top: 100%;
+        left: 100%;
+        margin: 1px -3px; }
+      .s2 .day-2 .event1 .info {
+        top: 100%;
+        left: 100%; }
+      .s2 .day-2 .event1 .time {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0; }
+    .s2 .day-2 .event2 {
+      z-index: 3;
+      top: 10px;
+      left: -20px;
+      background-image: url(../img/day1/castle.jpg); }
+      .s2 .day-2 .event2 h3 {
+        top: 100%;
+        left: 0;
+        margin: -2px 3px; }
+      .s2 .day-2 .event2 .info {
+        top: 100%;
+        left: -100%; }
+    .s2 .day-2 .event3 {
+      z-index: 4;
+      top: -10px;
+      left: 20px;
+      background-image: url(../img/day1/chan.jpg); }
+      .s2 .day-2 .event3 h3 {
+        top: 0;
+        left: 100%;
+        margin: 4px 2px; }
+      .s2 .day-2 .event3 .info {
+        top: 0;
+        left: 100%; }
+    .s2 .day-2 .event4 {
+      z-index: 2;
+      top: -20px;
+      left: -40px;
+      background-image: url(../img/day1/home.jpg); }
+      .s2 .day-2 .event4 h3 {
+        top: 0;
+        left: 0;
+        margin: 3px 6px; }
+      .s2 .day-2 .event4 .info {
+        top: 0;
+        left: -100%; }
+      .s2 .day-2 .event4 .time {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        right: 0; }
+    .s2 .day-2.active .event {
+      top: 0;
+      left: 0; }
+      .s2 .day-2.active .event .info {
+        top: 50%;
+        left: 5%; }
 
 @media screen and (max-width: 991px) {
   html {

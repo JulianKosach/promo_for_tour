@@ -415,6 +415,7 @@ header {
         width: 100%;
         min-height: 100vh;
         padding: 15vh 20px 100px;
+        background-color: #fff;
         overflow: hidden;
     }
 
@@ -484,6 +485,158 @@ header {
             }
             p {
                 left: 50%;
+            }
+        }
+    }
+
+        .event {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50vh;
+            overflow: hidden;
+            float: left;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s;
+            &.open-detail {
+                cursor: pointer;
+                &:hover, &:active, &.active {
+                    &:before {
+                        opacity: 0.2;
+                    }
+                }
+            }
+            &:before {
+                width: 120%;
+                height: 120%;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #000;
+                opacity: 0.6;
+                transition: all 0.25s;
+            }
+            h3 {
+                position: absolute;
+                z-index: 3;
+                width: 200%;
+                font-size: 20rem;
+                font-family: "Open Sans", sans-serif;
+                font-weight: bold;
+                color: #fff;
+                transform: translate3d(-50%,-50%, 0);
+                opacity: 0.6;
+                margin: 0;
+                transition: all 0.25s;
+            }
+            .time {
+                display: inline-block;
+                width: auto;
+                padding: 30px;
+                font-size: 3rem;
+                color: #fff;
+                background-color: rgba(0,0,0,0.1);
+                margin: 0;
+            }
+            .info {
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                z-index: 3;
+                width: 90%;
+                height: auto;
+                transform: translate3d(0,-50%, 0);
+                font-size: 5rem;
+                color: #fff;
+                text-align: center;
+                transition: all 0.5s;
+            }
+        }
+    .day-2 {
+        padding: 0;
+        .event1 {
+            z-index: 1;
+            top: 20px;
+            left: 30px;
+            background-image: url(../img/day1/breakfast.jpg);
+            h3 {
+                top: 100%;
+                left: 100%;
+                margin: 1px -3px;
+            }
+            .info {
+                top: 100%;
+                left: 100%;
+            }
+            .time {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+            }
+        }
+        .event2 {
+            z-index: 3;
+            top: 10px;
+            left: -20px;
+            background-image: url(../img/day1/castle.jpg);
+            h3 {
+                top: 100%;
+                left: 0;
+                margin: -2px 3px;
+            }
+            .info {
+                top: 100%;
+                left: -100%;
+            }
+        }
+        .event3 {
+            z-index: 4;
+            top: -10px;
+            left: 20px;
+            background-image: url(../img/day1/chan.jpg);
+            h3 {
+                top: 0;
+                left: 100%;
+                margin: 4px 2px;
+            }
+            .info {
+                top: 0;
+                left: 100%;
+            }
+        }
+        .event4 {
+            z-index: 2;
+            top: -20px;
+            left: -40px;
+            background-image: url(../img/day1/home.jpg);
+            h3 {
+                top: 0;
+                left: 0;
+                margin: 3px 6px;
+            }
+            .info {
+                top: 0;
+                left: -100%;
+            }
+            .time {
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        &.active {
+            .event {
+                top: 0;
+                left: 0;
+                .info {
+                    top: 50%;
+                    left: 5%;
+                }
             }
         }
     }
