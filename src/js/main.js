@@ -123,6 +123,22 @@ $(document).ready(function() {
 		$('.menu-list').removeClass('active');
 	});
 
+	$('.open-detail').on('click', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		detail_slider.stopAuto();
+		var sel = $(this).attr('data-open-modal');
+		$(sel).arcticmodal();
+	});
+
+
+
+	$('.close-modal').on('click', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		$(this).closest('.modal-pop').arcticmodal('close');
+	});
+
 
 
 	$('.go-to').on('click', function(e){
@@ -153,6 +169,7 @@ $(document).ready(function() {
 	    daysOfWeekHighlighted: '5'
 	});
 
+	$('#phone_inp').ForceNumericOnly();
 	$('#count_inp').ForceNumericOnly();
 	$('#date_inp').ForceNumericOnly();
 

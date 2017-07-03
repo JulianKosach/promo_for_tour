@@ -92,16 +92,16 @@
 
 
 					<li class="slide sld-2 day-1">
-						<div class="event event1 open-detail">
+						<div class="event event1 open-detail" data-open-modal="#pop-sc">
 							<h3>{{MC.c.detail.day1.title[lang]}}</h3>
 							<p class="info">{{MC.c.detail.day1.ev1.d[lang]}}</p>
 							<p class="time">{{MC.c.detail.day1.ev1.t}}</p>
 						</div>
-						<div class="event event2 open-detail">
+						<div class="event event2 open-detail" data-open-modal="#pop-muc">
 							<h3>{{MC.c.detail.day1.title[lang]}}</h3>
 							<p class="info">{{MC.c.detail.day1.ev2.d[lang]}}</p>
 						</div>
-						<div class="event event3 open-detail">
+						<div class="event event3 open-detail" data-open-modal="#pop-ber">
 							<h3>{{MC.c.detail.day1.title[lang]}}</h3>
 							<p class="info">{{MC.c.detail.day1.ev3.d[lang]}}</p>
 						</div>
@@ -119,11 +119,11 @@
 							<p class="info">{{MC.c.detail.day2.ev1.d[lang]}}</p>
 							<p class="time">{{MC.c.detail.day2.ev1.t}}</p>
 						</div>
-						<div class="event event2 open-detail">
+						<div class="event event2 open-detail" data-open-modal="#pop-ug">
 							<h3>{{MC.c.detail.day2.title[lang]}}</h3>
 							<p class="info">{{MC.c.detail.day2.ev2.d[lang]}}</p>
 						</div>
-						<div class="event event3 open-detail">
+						<div class="event event3 open-detail" data-open-modal="#pop-lum">
 							<h3>{{MC.c.detail.day2.title[lang]}}</h3>
 							<p class="info">{{MC.c.detail.day2.ev3.d[lang]}}</p>
 						</div>
@@ -141,15 +141,15 @@
 							<p class="info">{{MC.c.detail.day3.ev1.d[lang]}}</p>
 							<p class="time">{{MC.c.detail.day3.ev1.t}}</p>
 						</div>
-						<div class="event event2 open-detail">
+						<div class="event event2">
 							<h3>{{MC.c.detail.day3.title[lang]}}</h3>
 							<p class="info">{{MC.c.detail.day3.ev2.d[lang]}}</p>
 						</div>
-						<div class="event event3 open-detail">
+						<div class="event event3 open-detail" data-open-modal="#pop-sin">
 							<h3>{{MC.c.detail.day3.title[lang]}}</h3>
 							<p class="info">{{MC.c.detail.day3.ev3.d[lang]}}</p>
 						</div>
-						<div class="event event4 open-detail">
+						<div class="event event4 open-detail" data-open-modal="#pop-pul">
 							<h3>{{MC.c.detail.day3.title[lang]}}</h3>
 							<p class="info">{{MC.c.detail.day3.ev4.d[lang]}}</p>
 							<p class="time">{{MC.c.detail.day3.ev4.t}}</p>
@@ -203,7 +203,7 @@
 						<input id="asks_inp" name="asks" placeholder="{{MC.c.form.asksLbl[lang]}}"></input>
 					</div>
 						
-					<button type="submit" class="order-btn submit-btn">{{MC.c.form.submit[lang]}}</button>
+					<button type="submit" class="submit-btn">{{MC.c.form.submit[lang]}}</button>
 				</form>
 			</div>
 		</section>
@@ -220,7 +220,56 @@
 	<button class="up-btn go-to" data-go-to="#s1"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></button>
 
 	<div class="hidden-box" id="hidden-box">
-	
+
+		<div id="pop-sc" class="modal-pop modal-obj">
+			<button class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<h3>{{MC.c.obj.sc.t[lang]}}</h3>
+			<img src="img/day1/shenborn.jpg" alt="img">
+			<p>{{MC.c.obj.sc.d[lang]}}</p>
+		</div>
+
+		<div id="pop-muc" class="modal-pop modal-obj">
+			<button class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<h3>{{MC.c.obj.muc.t[lang]}}</h3>
+			<img src="img/day1/castle.jpg" alt="img">
+			<p>{{MC.c.obj.muc.d[lang]}}</p>
+		</div>
+
+		<div id="pop-ber" class="modal-pop modal-obj">
+			<button class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<h3>{{MC.c.obj.ber.t[lang]}}</h3>
+			<img src="img/day1/term.jpg" alt="img">
+			<p>{{MC.c.obj.ber.d[lang]}}</p>
+		</div>
+
+		<div id="pop-ug" class="modal-pop modal-obj">
+			<button class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<h3>{{MC.c.obj.ug.t[lang]}}</h3>
+			<img src="img/day2/castle.jpg" alt="img">
+			<p>{{MC.c.obj.ug.d[lang]}}</p>
+		</div>
+
+		<div id="pop-lum" class="modal-pop modal-obj">
+			<button class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<h3>{{MC.c.obj.lum.t[lang]}}</h3>
+			<img src="img/day2/chan.jpg" alt="img">
+			<p>{{MC.c.obj.lum.d[lang]}}</p>
+		</div>
+
+		<div id="pop-sin" class="modal-pop modal-obj">
+			<button class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<h3>{{MC.c.obj.sin.t[lang]}}</h3>
+			<img src="img/day3/sinevir.jpg" alt="img">
+			<p>{{MC.c.obj.sin.d[lang]}}</p>
+		</div>
+
+		<div id="pop-pul" class="modal-pop modal-obj">
+			<button class="close-modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<h3>{{MC.c.obj.pul.t[lang]}}</h3>
+			<img src="img/day3/waterfall.jpg" alt="img">
+			<p>{{MC.c.obj.pul.d[lang]}}</p>
+		</div>
+
 	</div>
 
 

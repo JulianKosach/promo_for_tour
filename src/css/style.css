@@ -45,6 +45,47 @@ button, input, textarea {
 .hidden-box {
   display: none !important; }
 
+.arcticmodal-overlay,
+.arcticmodal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; }
+
+.arcticmodal-container {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-collapse: collapse; }
+
+*:first-child + html .arcticmodal-container {
+  height: 100%; }
+
+.arcticmodal-container_i {
+  height: 100%;
+  margin: 0 auto; }
+
+.arcticmodal-container_i2 {
+  padding: 24px;
+  margin: 0;
+  border: 0;
+  vertical-align: middle; }
+
+.arcticmodal-error {
+  padding: 20px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff; }
+
+.arcticmodal-loading {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #000 url(loading.gif) no-repeat 50% 50%; }
+
 @keyframes bounce {
   0% {
     top: 0px; }
@@ -181,7 +222,7 @@ header {
   .more:hover, .more:active, .more.active {
     font-size: 2.5rem; }
 
-.order-btn {
+.order-btn, .submit-btn {
   display: inline-block;
   width: 250px;
   margin: 0 auto;
@@ -192,7 +233,7 @@ header {
   transition: all 0.35s;
   animation: borderBounce 3s;
   animation-iteration-count: infinite; }
-  .order-btn:hover, .order-btn:active, .order-btn.active {
+  .order-btn:hover, .order-btn:active, .order-btn.active, .submit-btn:hover, .submit-btn:active, .submit-btn.active {
     border: 2px solid #b400ff; }
 
 .up-btn {
@@ -221,7 +262,6 @@ header {
   background-position: center top;
   padding-top: 100px;
   height: 112vh;
-  margin-bottom: -12vh;
   color: #fff;
   text-align: center; }
   .s1 > div {
@@ -285,11 +325,11 @@ header {
 .s2 {
   position: relative;
   z-index: 3;
-  clip-path: polygon(0 0, 65% 12vh, 100% 8vh, 100% 100%, 0 100%);
   background-color: #aaa;
   width: 100%;
   height: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 0 60px 15px rgba(0, 0, 0, 0.9); }
   .s2 .order-btn {
     position: absolute;
     z-index: 8;
@@ -645,9 +685,9 @@ header {
       padding: 5px 0;
       transition: all 0.25s; }
     .s4 .inp-wrap.focused label {
-      border-color: #d65dec; }
+      border-color: #ec87ff; }
     .s4 .inp-wrap.focused input {
-      border-bottom: 2px solid #d65dec; }
+      border-bottom: 2px solid #ec87ff; }
   .s4 .last-inp {
     margin-bottom: 25px; }
   .s4 .order-btn {
@@ -670,7 +710,33 @@ footer {
   background-color: rgba(5, 10, 40, 0.75);
   border-top: 1px solid rgba(255, 255, 255, 0.75);
   color: #fff;
-  font-size: 1.5rem; }
+  font-size: 1.8rem; }
+
+.modal-obj {
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  max-width: 800px; }
+  .modal-obj .close-modal {
+    position: absolute;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    font-size: 20px; }
+  .modal-obj h3 {
+    font-size: 4rem; }
+  .modal-obj img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 40px auto 20px; }
+  .modal-obj p {
+    font-size: 2.4rem; }
 
 @media screen and (max-width: 991px) {
   html {
