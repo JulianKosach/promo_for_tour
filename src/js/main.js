@@ -4,7 +4,42 @@ function scrollTo(top) {
     }, 1000);
 };
 
+
+function infiniteAutoPlaySlider(slider, pause) {
+	if (slider) {
+		var pause = pause || 4000;
+		setTimeout(function(){
+			slider.goToNextSlide();
+			infiniteAutoPlaySlider(slider, pause);
+		}, pause);
+	}
+};
+
 $(document).ready(function() {
+
+	var slogan_slider = $('#s1').find('.slogan-slider .bx-slider').bxSlider({
+			mode: 'vertical',
+			responsive: true,
+			infiniteLoop: true,
+			controls: false,
+			adaptiveHeight: true,
+			adaptiveHeightSpeed: 200,
+			pager: false,
+			speed: 500,
+			minSlides: 1,
+			maxSlides: 1,
+			moveSlides: 1,
+			slideMargin: 0,
+			touchEnabled: true,
+			auto: false,
+			onSlideBefore: function($slideElement, oldIndex, newIndex) {
+
+			},
+			onSlideAfter: function($slideElement, oldIndex, newIndex) {
+
+			}
+		});
+	infiniteAutoPlaySlider(slogan_slider);
 
 	var detail_slider = $('#s2').find('.bxslider').bxSlider({
 			responsive: true,
@@ -18,7 +53,7 @@ $(document).ready(function() {
 			maxSlides: 1,
 			moveSlides: 1,
 			slideMargin: 0,
-			touchEnabled: false,
+			touchEnabled: true,
 			auto: true,
 			onSlideBefore: function($slideElement, oldIndex, newIndex) {
 				$('#s2').find('.slide').removeClass('active');

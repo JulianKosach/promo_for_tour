@@ -60,7 +60,13 @@
 			<canvas id="sinevir" width="100%" height="100%"></canvas>
 			<div class="container-fluid">
 				<h1>Тур <span>{{MC.c.tourTitle[lang]}}</span></h1>
-				<h2>{{MC.c.tourSlogan[lang]}}</h2>
+				<div class="slogan-slider">
+					<ul class="bx-slider">
+						<li class="sld-slogan" data-ng-repeat="slogan in MC.c.tourSlogan">
+							<h2>{{slogan[lang]}}</h2>
+						</li>
+					</ul>
+				</div>
 				<div class="decor"></div>
 				<button class="order-btn go-to" data-go-to="#s3">{{MC.c.buyTourBtn[lang]}}</button>
 
@@ -84,25 +90,36 @@
 						</div>
 					</li>
 
-					<li class="slide sld-1 active">
-						<div class="day">
-							<h3>{{MC.c.detail.s1.title[lang]}}</h3>
-							<p>{{MC.c.detail.s1.days[lang]}}</p>
+					<li class="slide sld-2">
+						<div class="event1">
+							<h3>{{MC.c.detail.day1.title[lang]}}</h3>
+							<p>{{MC.c.detail.day1.days[lang]}}</p>
 						</div>
-						<div class="night">
-							<h3>{{MC.c.detail.s1.title[lang]}}</h3>
-							<p>{{MC.c.detail.s1.nights[lang]}}</p>
+						<div class="event2">
+							<h3>{{MC.c.detail.day1.title[lang]}}</h3>
+							<p>{{MC.c.detail.day1.nights[lang]}}</p>
 						</div>
 					</li>
 
-					<li class="slide sld-1 active">
-						<div class="day">
-							<h3>{{MC.c.detail.s1.title[lang]}}</h3>
-							<p>{{MC.c.detail.s1.days[lang]}}</p>
+					<li class="slide sld-3">
+						<div class="event1">
+							<h3>{{MC.c.detail.day2.title[lang]}}</h3>
+							<p>{{MC.c.detail.day2.days[lang]}}</p>
 						</div>
-						<div class="night">
-							<h3>{{MC.c.detail.s1.title[lang]}}</h3>
-							<p>{{MC.c.detail.s1.nights[lang]}}</p>
+						<div class="event2">
+							<h3>{{MC.c.detail.day2.title[lang]}}</h3>
+							<p>{{MC.c.detail.day2.nights[lang]}}</p>
+						</div>
+					</li>
+
+					<li class="slide sld-4">
+						<div class="event1">
+							<h3>{{MC.c.detail.day3.title[lang]}}</h3>
+							<p>{{MC.c.detail.day3.days[lang]}}</p>
+						</div>
+						<div class="event2">
+							<h3>{{MC.c.detail.day3.title[lang]}}</h3>
+							<p>{{MC.c.detail.day3.nights[lang]}}</p>
 						</div>
 					</li>
 
