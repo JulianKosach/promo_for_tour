@@ -139,8 +139,6 @@ $(document).ready(function() {
 		$(this).closest('.modal-pop').arcticmodal('close');
 	});
 
-
-
 	$('.go-to').on('click', function(e){
 		e.preventDefault();
 		e.stopPropagation();
@@ -148,14 +146,17 @@ $(document).ready(function() {
 		var sel = $(this).attr('data-go-to');
 		var top = 0;
 		if (sel == '#s2') {
-			top = -parseFloat($('#s1').css('marginBottom')) + $(window).height()*0.58;
+			top = $(window).height()*0.7;
 			if (detail_slider) {
 				detail_slider.goToSlide(0);
 				detail_slider.startAuto();
 			}
 		} else 
 		if (sel == '#s3') {
-			top = -parseFloat($('#s1').css('marginBottom')) + $(window).height()*1.6;
+			top = ($(window).height()*1.2 + $('#s2').height())*0.6 - $('header').height()*0.6;
+		} else 
+		if (sel == '#s4') {
+			top = $(window).height()*2.6;
 		}
 		scrollTo(top);
 	});
@@ -174,11 +175,31 @@ $(document).ready(function() {
 	$('#date_inp').ForceNumericOnly();
 
 	$('.inp-wrap input').on('focus', function(){
-		$(this).closest('.inp-wrap').addClass('focused');
+		$(this).closest('.inp-wrap').removeClass('error-input').addClass('focused');
 	});
 
 	$('.inp-wrap input').on('blur', function(){
 		$(this).closest('.inp-wrap').removeClass('focused');
+	});
+
+	$('.submit-btn').on('click', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		var $form = $('#main-form');
+		$form.find('.inp-wrap').removeClass('error-input');
+
+		if ($form.find('#name_inp').val().length < 2) $form.find('#name_inp').closest('.inp-wrap').addClass('error-input');
+
+		if ($form.find('#phone_inp').val().length < 7) $form.find('#phone_inp').closest('.inp-wrap').addClass('error-input');
+
+		if ($form.find('#email_inp').val().length < 5) $form.find('#email_inp').closest('.inp-wrap').addClass('error-input');
+
+		if ($form.find('#date_inp').val().length < 10) $form.find('#date_inp').closest('.inp-wrap').addClass('error-input');
+
+		if ($form.find('#count_inp').val().length < 1) $form.find('#count_inp').closest('.inp-wrap').addClass('error-input');
+
+
+		if ($form.find('.error-input').length < 1) $form.submit();
 	});
 
 }); 

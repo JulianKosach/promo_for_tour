@@ -260,7 +260,10 @@ angular.module('app').factory('contentData', ['$rootScope', function($rootScope)
 			},
 
 			price: {
-
+				pr: {
+					ua: 'Всього за 995 грн!',
+					ru: 'Всего за 995 грн!'
+				}
 			},
 
 

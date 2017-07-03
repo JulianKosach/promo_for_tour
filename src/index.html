@@ -68,7 +68,7 @@
 					</ul>
 				</div>
 				<div class="decor"></div>
-				<button class="order-btn go-to" data-go-to="#s3">{{MC.c.buyTourBtn[lang]}}</button>
+				<button class="order-btn go-to" data-go-to="#s4">{{MC.c.buyTourBtn[lang]}}</button>
 
 				<button class="more go-to" data-go-to="#s2"><i class="fa fa-long-arrow-down" aria-hidden="true"></i> {{MC.c.moreBtn[lang]}}</button>
 			</div>
@@ -158,12 +158,27 @@
 
 				</ul>
 			</div>
-			<button class="order-btn go-to" data-go-to="#s3">{{MC.c.buyTourBtn[lang]}}</button>
+			<button class="order-btn go-to" data-go-to="#s4">{{MC.c.buyTourBtn[lang]}}</button>
 		</section>
 
 
 		<section class="s3" id="s3">
-			<!-- <button class="order-btn go-to" data-go-to="#s3">{{MC.c.buyTourBtn[lang]}}</button> -->
+			<div class="price-wrap">
+
+				<div class="price">
+					<h2>{{MC.c.price.pr[lang]}}</h2>
+				</div>
+
+				<div class="price-include active">
+					
+				</div>
+
+				<div class="price-not-include">
+					
+				</div>
+
+				<button class="order-btn go-to" data-go-to="#s4">{{MC.c.buyTourBtn[lang]}}</button>
+			</div>
 		</section>
 
 
@@ -171,7 +186,7 @@
 			<div class="form-container">
 				<h2>{{MC.c.form.title[lang]}} {{MC.c.tourTitle[lang]}}</h2>
 				<div class="decor"></div>
-				<form action="https://events.tickets.ua/uk/event/tur-10-izyuminok-zakarpatya/25987">
+				<form action="https://events.tickets.ua/uk/event/tur-10-izyuminok-zakarpatya/25987" id="main-form">
 
 					<div class="inp-wrap">
 						<label for="name_inp"><i class="fa fa-user" aria-hidden="true"></i></label>
@@ -203,7 +218,7 @@
 						<input id="asks_inp" name="asks" placeholder="{{MC.c.form.asksLbl[lang]}}"></input>
 					</div>
 						
-					<button type="submit" class="submit-btn">{{MC.c.form.submit[lang]}}</button>
+					<div class="submit-btn">{{MC.c.form.submit[lang]}}</div>
 				</form>
 			</div>
 		</section>
