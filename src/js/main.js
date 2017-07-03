@@ -85,6 +85,10 @@ $(document).ready(function() {
 		var top = 0;
 		if (sel == '#s2') {
 			top = -parseFloat($('#s1').css('marginBottom')) + $(window).height()*0.58;
+			if (detail_slider) {
+				detail_slider.goToSlide(0);
+				detail_slider.startAuto();
+			}
 		} else 
 		if (sel == '#s3') {
 			top = -parseFloat($('#s1').css('marginBottom')) + $(window).height()*1.6;

@@ -163,14 +163,57 @@
 
 
 		<section class="s3" id="s3">
-
-				<button class="more go-to" data-go-to="#s4"><i class="fa fa-long-arrow-down" aria-hidden="true"></i> {{MC.c.moreBtn[lang]}}</button>
+			<!-- <button class="order-btn go-to" data-go-to="#s3">{{MC.c.buyTourBtn[lang]}}</button> -->
 		</section>
 
 
 		<section class="s4" id="s4">
+			<div class="form-container">
+				<h2>{{MC.c.form.title[lang]}} {{MC.c.tourTitle[lang]}}</h2>
+				<div class="decor"></div>
+				<form action="https://events.tickets.ua/uk/event/tur-10-izyuminok-zakarpatya/25987">
 
-				
+					<div class="inp-wrap">
+						<label for="name_inp"></label>
+						<input type="text" id="name_inp" name="name" placeholder="{{MC.c.form.nameLbl[lang]}}">
+					</div>
+					
+					<div class="inp-wrap">
+						<label for="phone_inp"></label>
+						<input type="phone" id="phone_inp" name="phone" placeholder="{{MC.c.form.phoneLbl[lang]}}">
+					</div>
+					
+					<div class="inp-wrap">
+						<label for="email_inp"></label>
+						<input type="email" id="email_inp" name="email" placeholder="{{MC.c.form.emailLbl[lang]}}">
+					</div>
+					
+					<div class="inp-wrap">
+						<label for="date_inp"></label>
+						<input type="date" id="date_inp" name="date" placeholder="{{MC.c.form.dateLbl[lang]}}">
+					</div>
+					
+					<!-- <div class="inp-wrap">
+						<label>{{MC.c.form.groupLbl[lang]}}</label>
+						<label for="group_tour">{{MC.c.form.groupTourLbl[lang]}}</label>
+						<input type="radio" name="group_tour" id="group_tour" style="display: none;">
+						<label for="indiv_tour">{{MC.c.form.indivTourLbl[lang]}}</label>
+						<input type="radio" name="indiv_tour" id="indiv_tour" style="display: none;">
+					</div> -->
+					
+					<div class="inp-wrap">
+						<label for="count_inp"></label>
+						<input type="text" id="count_inp" name="count" placeholder="{{MC.c.form.countLbl[lang]}}">
+					</div>
+					
+					<div class="inp-wrap last-inp">
+						<label for="asks_inp"></label>
+						<textarea id="asks_inp" name="asks"></textarea placeholder="{{MC.c.form.asksLbl[lang]}}">
+					</div>
+						
+					<button type="submit" class="order-btn submit-btn">{{MC.c.form.submit[lang]}}</button>
+				</form>
+			</div>
 		</section>
 
 	</main>
@@ -178,7 +221,7 @@
 
 	<footer>
 		<div class="container">
-			<!-- <h3><span class="glyphicon glyphicon-user"></span> Made by Julian Kosach</h3> -->
+			<h3><span class="glyphicon glyphicon-user"></span> Made by Julian Kosach</h3>
 		</div>
 	</footer>
 

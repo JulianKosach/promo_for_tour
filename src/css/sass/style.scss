@@ -334,11 +334,7 @@ header {
     position: relative;
     z-index: 3;
     clip-path: polygon(0 0, 65% 12vh, 100% 8vh, 100% 100%, 0 100%);
-    background-color: #bdada5;
-    // background-image: url(../img/bg/pine.png);
-    // background-size: 40% auto;
-    // background-repeat: no-repeat;
-    // background-position: -10% 98%;
+    background-color: #aaa;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -430,22 +426,23 @@ header {
             background-size: cover;
             padding: 20vh 0 0;
             transition: all 1s;
+            overflow: hidden;
         }
         h3 {
             position: relative;
             z-index: 1;
-            width: 500px;
-            margin: 0 -250px;
+            width: 1000px;
+            margin: 0 -500px;
             text-align: center;
-            font-size: 5rem;
+            font-size: 6rem;
         }
         p {
             display: inline-block;
             position: relative;
             z-index: 1;
-            width: 250px;
-            margin-left: -125px;
-            font-size: 7rem;
+            width: 1400px;
+            margin-left: -700px;
+            font-size: 9rem;
             transition: all 1s;
             padding: 15px 0;
             text-align: center;
@@ -682,9 +679,91 @@ header {
             background-image: url(../img/day3/waterfall.jpg);
         }
     }
+
 }
 
 
+
+
+
+
+
+.s4 {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+    background-color: #bdada5;
+    background-image: url(../img/bg/trees.jpg);
+    color: #fff;
+    font-size: 2rem;
+    padding: 60px 0 150px;
+    text-align: center;
+    .form-container {
+        width: 80%;
+        max-width: 750px;
+        padding: 50px 50px;
+        margin: 0 auto;
+        background-color: rgba(0,0,0,0.75);
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    .decor {
+        position: relative;
+        z-index: 1;
+        margin: 20px auto;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        background-color: #fff;
+        &:before, &:after {
+            position: absolute;
+            z-index: 2;
+            width: 200px;
+            height: 2px;
+            top: 2px;
+            background-color: #fff;
+        }
+        &:before {
+            right: 25px;
+        }
+        &:after {
+            left: 25px;
+        }
+    }
+    input, label, textarea {
+        display: inline-block;
+    }
+    input, textarea {
+        width: 100%;
+        border-bottom: 2px solid #fff;
+        font-size: 2.4rem;
+        padding: 3px 10px 3px 30px;
+    }
+    .last-inp {
+        margin-bottom: 25px;
+    }
+    .order-btn {
+        padding: 10px 50px;
+        font-size: 2.6rem;
+    }
+}
+
+
+footer {
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+    padding: 15px 0;
+    width: 100%;
+    background-color: rgba(5, 10, 40,0.75);
+    border-top: 1px solid rgba(255,255,255,0.75);
+    color: #fff;
+    font-size: 1.5rem;
+}
 
 
 
