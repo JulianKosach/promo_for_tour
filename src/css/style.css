@@ -323,7 +323,7 @@ header {
   .s2 .bx-prev, .s2 .bx-next {
     position: absolute;
     z-index: 10;
-    width: 80px;
+    width: 100px;
     height: 100%;
     font-size: 0;
     top: 0;
@@ -570,18 +570,30 @@ header {
   font-size: 2rem;
   padding: 60px 0 150px;
   text-align: center; }
+  .s4:before {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5; }
   .s4 .form-container {
+    position: relative;
+    z-index: 5;
     width: 80%;
     max-width: 750px;
     padding: 50px 50px;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.75); }
+    background-color: rgba(0, 0, 0, 0.65);
+    overflow: hidden; }
   .s4 h2 {
     font-size: 3rem; }
   .s4 .decor {
     position: relative;
     z-index: 1;
-    margin: 20px auto;
+    margin: 20px auto 30px;
     width: 6px;
     height: 6px;
     border-radius: 3px;
@@ -597,18 +609,56 @@ header {
       right: 25px; }
     .s4 .decor:after {
       left: 25px; }
-  .s4 input, .s4 label, .s4 textarea {
+  .s4 input, .s4 textarea {
     display: inline-block; }
   .s4 input, .s4 textarea {
     width: 100%;
     border-bottom: 2px solid #fff;
     font-size: 2.4rem;
-    padding: 3px 10px 3px 30px; }
+    padding: 3px 10px 3px 60px;
+    transition: all 0.25s; }
+  .s4 ::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 0.7; }
+  .s4 ::-moz-placeholder {
+    color: #fff;
+    opacity: 0.7; }
+  .s4 :-moz-placeholder {
+    color: #fff;
+    opacity: 0.7; }
+  .s4 :-ms-input-placeholder {
+    color: #fff;
+    opacity: 0.7; }
+  .s4 .inp-wrap {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px; }
+    .s4 .inp-wrap label {
+      display: inline-block;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 40px;
+      border: 2px solid #fff;
+      border-bottom-color: transparent;
+      padding: 5px 0;
+      transition: all 0.25s; }
+    .s4 .inp-wrap.focused label {
+      border-color: #d65dec; }
+    .s4 .inp-wrap.focused input {
+      border-bottom: 2px solid #d65dec; }
   .s4 .last-inp {
     margin-bottom: 25px; }
   .s4 .order-btn {
     padding: 10px 50px;
     font-size: 2.6rem; }
+
+.datepicker {
+  font-size: 2rem;
+  padding: 10px !important; }
+  .datepicker:after {
+    width: 15px; }
 
 footer {
   position: absolute;
@@ -716,6 +766,17 @@ footer {
       .s1 .decor:after {
         left: 20px; }
     .s1 .more {
-      margin: 40px auto 0; } }
+      margin: 40px auto 0; }
+  .s4 .form-container {
+    width: 94%;
+    padding: 30px 20px; }
+  .s4 .decor:before, .s4 .decor:after {
+    width: 90px; }
+  .s4 .decor:before {
+    right: 15px; }
+  .s4 .decor:after {
+    left: 15px; }
+  .s4 .order-btn {
+    animation: none; } }
 
 /*# sourceMappingURL=style.css.map */

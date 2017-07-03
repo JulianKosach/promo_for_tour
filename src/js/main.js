@@ -1,3 +1,49 @@
+//jq функция которая разрешает ввод только циферных значений
+jQuery.fn.ForceNumericOnly =
+    function() {
+        return this.each(function() {
+            $(this).keydown(function(e) {
+                var key = e.charCode || e.keyCode || 0;
+                return (
+                    key === 8 ||
+                    key === 9 ||
+                    key === 13 ||
+                    key === 46 ||
+                    key === 110 ||
+                    key === 190 ||
+                    (key >= 35 && key <= 40) ||
+                    (key >= 48 && key <= 57) ||
+                    (key >= 96 && key <= 105));
+            });
+        });
+    };
+
+$.fn.datepicker.dates['ua'] = {
+    days: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"],
+    daysShort: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    daysMin: ["Нд", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    months: ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
+    monthsShort: ["Січ", "Лют", "Бер", "Кві", "Тра", "Чер", "Лип", "Сер", "Вер", "Жов", "Лис", "Гру"],
+    today: "Сьогодні",
+    clear: "Очистити",
+    format: "dd.mm.yyyy",
+    titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+    weekStart: 1
+};
+
+$.fn.datepicker.dates['ru'] = {
+    days: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+    daysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    daysMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+    today: 'Сегодня',
+    clear: 'Очистить',
+    format: "dd.mm.yyyy",
+    titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
+    weekStart: 1
+};
+
 function scrollTo(top) {
 	$("html, body").animate({
         scrollTop: top
@@ -14,6 +60,8 @@ function infiniteAutoPlaySlider(slider, pause) {
 		}, pause);
 	}
 };
+
+var datepicker;
 
 $(document).ready(function() {
 
@@ -94,6 +142,26 @@ $(document).ready(function() {
 			top = -parseFloat($('#s1').css('marginBottom')) + $(window).height()*1.6;
 		}
 		scrollTo(top);
+	});
+
+	datepicker = $('#date_inp').datepicker({
+	    format: 'dd.mm.yyyy',
+	    language: 'ua',
+	    todayHighlight: true,
+	    startDate: '07.07.2017',
+	    daysOfWeekDisabled: '0,1,2,3,4,6',
+	    daysOfWeekHighlighted: '5'
+	});
+
+	$('#count_inp').ForceNumericOnly();
+	$('#date_inp').ForceNumericOnly();
+
+	$('.inp-wrap input').on('focus', function(){
+		$(this).closest('.inp-wrap').addClass('focused');
+	});
+
+	$('.inp-wrap input').on('blur', function(){
+		$(this).closest('.inp-wrap').removeClass('focused');
 	});
 
 }); 

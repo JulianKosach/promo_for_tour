@@ -174,41 +174,33 @@
 				<form action="https://events.tickets.ua/uk/event/tur-10-izyuminok-zakarpatya/25987">
 
 					<div class="inp-wrap">
-						<label for="name_inp"></label>
+						<label for="name_inp"><i class="fa fa-user" aria-hidden="true"></i></label>
 						<input type="text" id="name_inp" name="name" placeholder="{{MC.c.form.nameLbl[lang]}}">
 					</div>
 					
 					<div class="inp-wrap">
-						<label for="phone_inp"></label>
+						<label for="phone_inp"><i class="fa fa-phone" aria-hidden="true"></i></label>
 						<input type="phone" id="phone_inp" name="phone" placeholder="{{MC.c.form.phoneLbl[lang]}}">
 					</div>
 					
 					<div class="inp-wrap">
-						<label for="email_inp"></label>
+						<label for="email_inp"><i class="fa fa-envelope" aria-hidden="true"></i></label>
 						<input type="email" id="email_inp" name="email" placeholder="{{MC.c.form.emailLbl[lang]}}">
 					</div>
 					
-					<div class="inp-wrap">
-						<label for="date_inp"></label>
-						<input type="date" id="date_inp" name="date" placeholder="{{MC.c.form.dateLbl[lang]}}">
+					<div class="inp-wrap date-wrap">
+						<label for="date_inp"><i class="fa fa-calendar" aria-hidden="true"></i></label>
+						<input type="text" id="date_inp" placeholder="{{MC.c.form.dateLbl[lang]}}">
 					</div>
 					
-					<!-- <div class="inp-wrap">
-						<label>{{MC.c.form.groupLbl[lang]}}</label>
-						<label for="group_tour">{{MC.c.form.groupTourLbl[lang]}}</label>
-						<input type="radio" name="group_tour" id="group_tour" style="display: none;">
-						<label for="indiv_tour">{{MC.c.form.indivTourLbl[lang]}}</label>
-						<input type="radio" name="indiv_tour" id="indiv_tour" style="display: none;">
-					</div> -->
-					
 					<div class="inp-wrap">
-						<label for="count_inp"></label>
+						<label for="count_inp"><i class="fa fa-users" aria-hidden="true"></i></label>
 						<input type="text" id="count_inp" name="count" placeholder="{{MC.c.form.countLbl[lang]}}">
 					</div>
 					
-					<div class="inp-wrap last-inp">
-						<label for="asks_inp"></label>
-						<textarea id="asks_inp" name="asks"></textarea placeholder="{{MC.c.form.asksLbl[lang]}}">
+					<div class="inp-wrap asks-wrap">
+						<label for="asks_inp"><i class="fa fa-star" aria-hidden="true"></i></label>
+						<input id="asks_inp" name="asks" placeholder="{{MC.c.form.asksLbl[lang]}}"></input>
 					</div>
 						
 					<button type="submit" class="order-btn submit-btn">{{MC.c.form.submit[lang]}}</button>
@@ -238,6 +230,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.0/js/bootstrap-datepicker.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.0/css/bootstrap-datepicker3.min.css" />
 	<!-- END Bootstrap -->
 
 	<script src="js/libs/jquery.bxslider.min.js"></script>
