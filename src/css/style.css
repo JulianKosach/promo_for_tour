@@ -602,15 +602,16 @@ header {
 .s3 {
   width: 100%;
   height: auto;
-  padding: 180px 0 120px;
+  padding: 280px 0 220px;
   position: relative;
   z-index: 1;
   background-color: #bdada5;
-  background-image: url(../img/bg/forest.png);
+  background-image: url(../img/bg/f.jpg);
   background-size: cover;
   background-position: center;
   font-size: 2rem;
-  text-align: center; }
+  text-align: center;
+  margin: -100px 0; }
   .s3:before {
     position: absolute;
     z-index: 2;
@@ -625,7 +626,8 @@ header {
     z-index: 3;
     width: 90%;
     max-width: 1000px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    transition: all 0.25s; }
   .s3 .price {
     position: absolute;
     z-index: 5;
@@ -739,7 +741,9 @@ header {
   color: #fff;
   font-size: 2rem;
   padding: 60px 0 150px;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 0 60px 15px rgba(0, 0, 0, 0.9); }
   .s4:before {
     position: absolute;
     z-index: 4;
