@@ -78,7 +78,7 @@ $(document).ready(function() {
 			maxSlides: 1,
 			moveSlides: 1,
 			slideMargin: 0,
-			touchEnabled: true,
+			touchEnabled: false,
 			auto: false,
 			onSlideBefore: function($slideElement, oldIndex, newIndex) {
 

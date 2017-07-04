@@ -1138,7 +1138,7 @@ footer {
     .s1 {
         padding-top: 70px;
         .slogan-slider {
-            margin-top: 80px;
+            margin-top: 30px;
         }
         h2 {
             font-size: 4rem;
@@ -1164,12 +1164,103 @@ footer {
         }
     }
 
+    .s2 {
+        .bx-prev, .bx-next, .bx-pager {
+            display: none;
+        }
+        .sld-1 {
+            p {
+                font-size: 5.5rem;
+            }
+        }
+        .event {
+            h3 {
+                font-size: 14rem;
+            }
+            .info {
+                font-size: 3.5rem;
+            }
+            .time {
+                display: none;
+            }
+        }
+        .order-btn {
+            bottom: 5px;
+        }
+    }
+
+
+
+    .s3 {
+        padding: 280px 0 220px;
+        font-size: 2rem;
+        margin: -100px 0;
+        .price {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            margin: -50px;
+            h2 {
+                font-size: 3rem;
+            }
+        }
+        .price-btn {
+            margin-bottom: -20px;
+            padding: 20px 0 25px;
+            font-size: 3rem;
+            &.active {
+                padding-top: 20px;
+            }
+        }
+        .price-include-btn {
+            padding-right: 30px;
+            border-bottom-right-radius: 10px;
+        }
+        .price-not-include-btn {
+            padding-left: 30px;
+            border-bottom-left-radius: 10px;
+        }
+        .price-block {
+            padding: 50px 0 70px;
+        }
+        .price-item {
+            padding: 10px 20px;
+            width: 90%;
+            margin: 10px auto;
+            box-shadow: 0 0 15px 0 #000;
+            .check {
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+                display: block;
+                margin: 0 auto;
+            }
+            p {
+                display: block;
+                font-size: 2.4rem;
+                padding: 0 25px;
+            }
+        }
+    }
+
 
 
     .s4 {
         .form-container {
             width: 94%;
             padding: 30px 20px;
+        }
+        h2 {
+            font-size: 3.5rem;
+        }
+        .inp-wrap {
+            label {
+                padding: 2px 0;
+                font-size: 3rem;
+            }
+            input, textarea {
+                font-size: 3rem;
+            }
         }
         .decor {
             &:before, &:after {
@@ -1184,6 +1275,22 @@ footer {
         }
         .order-btn {
             animation: none;
+        }
+
+    }
+
+    footer {
+        font-size: 2.3rem;
+    }
+
+
+    .modal-obj {
+        padding: 30px 20px;
+        img {
+            margin: 30px auto 20px;
+        }
+        p {
+            font-size: 2.8rem;
         }
     }
 }

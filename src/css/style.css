@@ -953,7 +953,7 @@ footer {
   .s1 {
     padding-top: 70px; }
     .s1 .slogan-slider {
-      margin-top: 80px; }
+      margin-top: 30px; }
     .s1 h2 {
       font-size: 4rem; }
     .s1 .decor {
@@ -971,9 +971,68 @@ footer {
         left: 20px; }
     .s1 .more {
       margin: 40px auto 0; }
+  .s2 .bx-prev, .s2 .bx-next, .s2 .bx-pager {
+    display: none; }
+  .s2 .sld-1 p {
+    font-size: 5.5rem; }
+  .s2 .event h3 {
+    font-size: 14rem; }
+  .s2 .event .info {
+    font-size: 3.5rem; }
+  .s2 .event .time {
+    display: none; }
+  .s2 .order-btn {
+    bottom: 5px; }
+  .s3 {
+    padding: 280px 0 220px;
+    font-size: 2rem;
+    margin: -100px 0; }
+    .s3 .price {
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      margin: -50px; }
+      .s3 .price h2 {
+        font-size: 3rem; }
+    .s3 .price-btn {
+      margin-bottom: -20px;
+      padding: 20px 0 25px;
+      font-size: 3rem; }
+      .s3 .price-btn.active {
+        padding-top: 20px; }
+    .s3 .price-include-btn {
+      padding-right: 30px;
+      border-bottom-right-radius: 10px; }
+    .s3 .price-not-include-btn {
+      padding-left: 30px;
+      border-bottom-left-radius: 10px; }
+    .s3 .price-block {
+      padding: 50px 0 70px; }
+    .s3 .price-item {
+      padding: 10px 20px;
+      width: 90%;
+      margin: 10px auto;
+      box-shadow: 0 0 15px 0 #000; }
+      .s3 .price-item .check {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        display: block;
+        margin: 0 auto; }
+      .s3 .price-item p {
+        display: block;
+        font-size: 2.4rem;
+        padding: 0 25px; }
   .s4 .form-container {
     width: 94%;
     padding: 30px 20px; }
+  .s4 h2 {
+    font-size: 3.5rem; }
+  .s4 .inp-wrap label {
+    padding: 2px 0;
+    font-size: 3rem; }
+  .s4 .inp-wrap input, .s4 .inp-wrap textarea {
+    font-size: 3rem; }
   .s4 .decor:before, .s4 .decor:after {
     width: 90px; }
   .s4 .decor:before {
@@ -981,6 +1040,14 @@ footer {
   .s4 .decor:after {
     left: 15px; }
   .s4 .order-btn {
-    animation: none; } }
+    animation: none; }
+  footer {
+    font-size: 2.3rem; }
+  .modal-obj {
+    padding: 30px 20px; }
+    .modal-obj img {
+      margin: 30px auto 20px; }
+    .modal-obj p {
+      font-size: 2.8rem; } }
 
 /*# sourceMappingURL=style.css.map */
