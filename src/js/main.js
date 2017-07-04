@@ -202,4 +202,24 @@ $(document).ready(function() {
 		if ($form.find('.error-input').length < 1) $form.submit();
 	});
 
+	$('.price-btn').on('click', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+
+		$(this).addClass('active');
+
+		if ($(this).hasClass('price-include-btn')) {
+
+			$('.price-not-include-btn').removeClass('active');
+			$('.price-include-wrap').addClass('active');
+			$('.price-not-include-wrap').removeClass('active');
+
+		} else {
+			$('.price-include-btn').removeClass('active');
+			$('.price-not-include-wrap').addClass('active');
+			$('.price-include-wrap').removeClass('active');
+
+		}
+	});
+
 }); 

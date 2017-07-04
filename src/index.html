@@ -169,12 +169,45 @@
 					<h2>{{MC.c.price.pr[lang]}}</h2>
 				</div>
 
-				<div class="price-include active">
-					
+				<button class="price-include-btn price-btn active">{{MC.c.price.inc.t[lang]}}</button>
+				<button class="price-not-include-btn price-btn">{{MC.c.price.ninc.t[lang]}}</button>
+
+				<div class="price-include-wrap price-block active">
+					<div class="price-item price-1">
+						<div class="check" style="background-image: url(img/price/bus.jpg);"></div>
+						<p>{{MC.c.price.inc.i1[lang]}}</p>
+					</div>
+					<div class="price-item price-2">
+						<p>{{MC.c.price.inc.i2[lang]}}</p>
+						<div class="check" style="background-image: url(img/price/home.jpg);"></div>
+					</div>
+					<div class="price-item price-3">
+						<div class="check" style="background-image: url(img/price/gid.jpg);"></div>
+						<p>{{MC.c.price.inc.i3[lang]}}</p>
+					</div>
+					<div class="price-item price-4">
+						<p>{{MC.c.price.inc.i4[lang]}}</p>
+						<div class="check" style="background-image: url(img/price/eks.jpg);"></div>
+					</div>
+					<div class="price-item price-5">
+						<div class="check" style="background-image: url(img/price/strach.jpg);"></div>
+						<p>{{MC.c.price.inc.i5[lang]}}</p>
+					</div>
 				</div>
 
-				<div class="price-not-include">
-					
+				<div class="price-not-include-wrap price-block row">
+					<div class="price-item price-1">
+						<div class="check" style="background-image: url(img/price/tickets.jpg);"></div>
+						<p>{{MC.c.price.ninc.i1[lang]}}</p>
+					</div>
+					<div class="price-item price-2">
+						<p>{{MC.c.price.ninc.i2[lang]}}</p>
+						<div class="check" style="background-image: url(img/day2/breakfast.jpg);"></div>
+					</div>
+					<div class="price-item price-3">
+						<div class="check" style="background-image: url(img/price/deg.jpg);"></div>
+						<p>{{MC.c.price.ninc.i3[lang]}}</p>
+					</div>
 				</div>
 
 				<button class="order-btn go-to" data-go-to="#s4">{{MC.c.buyTourBtn[lang]}}</button>

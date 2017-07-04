@@ -606,7 +606,7 @@ header {
   position: relative;
   z-index: 1;
   background-color: #bdada5;
-  background-image: url(../img/day3/sinevir.jpg);
+  background-image: url(../img/bg/forest.png);
   background-size: cover;
   background-position: center;
   font-size: 2rem;
@@ -619,14 +619,12 @@ header {
     top: 0;
     left: 0;
     background-color: #000;
-    opacity: 0.3; }
+    opacity: 0.2; }
   .s3 .price-wrap {
     position: relative;
     z-index: 3;
     width: 90%;
-    min-height: 300px;
-    max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 1000px;
     margin: 0 auto; }
   .s3 .price {
     position: absolute;
@@ -637,7 +635,7 @@ header {
     margin: -100px;
     top: 0;
     left: 50%;
-    background-color: rgba(0, 0, 0, 0.9); }
+    background-color: #000; }
     .s3 .price h2 {
       position: absolute;
       z-index: 6;
@@ -648,6 +646,79 @@ header {
       width: 100%;
       font-size: 4rem;
       margin: 0; }
+  .s3 .price-btn {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    float: left;
+    height: auto;
+    margin-bottom: -20px;
+    opacity: 0.7;
+    padding: 20px 0 25px;
+    background-color: #c150fd;
+    color: #fff;
+    font-size: 3rem;
+    transition: all 0.25s; }
+    .s3 .price-btn:hover, .s3 .price-btn:active {
+      opacity: 0.9; }
+    .s3 .price-btn.active {
+      padding-top: 30px;
+      opacity: 1;
+      z-index: 4; }
+  .s3 .price-include-btn {
+    padding-right: 80px; }
+  .s3 .price-not-include-btn {
+    padding-left: 80px; }
+  .s3 .price-block {
+    position: relative;
+    z-index: 2;
+    float: left;
+    opacity: 0;
+    display: none;
+    width: 100%;
+    min-height: 100px;
+    background-color: #fff;
+    margin: 0;
+    padding: 50px 0 70px; }
+    .s3 .price-block.active {
+      z-index: 3;
+      opacity: 1;
+      display: block; }
+  .s3 .price-item {
+    padding: 10px 20px;
+    margin: 0 auto; }
+    .s3 .price-item p, .s3 .price-item .check {
+      display: inline-block;
+      vertical-align: middle; }
+    .s3 .price-item .check {
+      position: relative;
+      z-index: 1;
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+      border: 3px solid #c150fd;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center; }
+      .s3 .price-item .check:before {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url(../img/price/check.png);
+        background-size: 60% auto;
+        background-position: center;
+        background-repeat: no-repeat; }
+    .s3 .price-item p {
+      font-size: 2.4rem;
+      padding: 0 25px; }
+  .s3 .price-not-include-wrap .price-item .check:before {
+    background-image: url(../img/price/pay.png);
+    background-size: 70% auto; }
   .s3 .order-btn {
     position: absolute;
     z-index: 5;
