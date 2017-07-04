@@ -156,7 +156,7 @@ $(document).ready(function() {
 			top = ($(window).height()*1.2 + $('#s2').height())*0.6 - $('header').height()*0.6;
 		} else 
 		if (sel == '#s4') {
-			top = $(window).height()*2.6;
+			top = ($(window).height()*1.2 + $('#s2').height() + $('#s3').height()*1.3)*0.6 - $('header').height()*0.6;
 		}
 		scrollTo(top);
 	});
