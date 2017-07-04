@@ -14,8 +14,7 @@ function initCanvasImg() {
             <img id="first" src="img/bg/sinevir/first.png" alt="sinevir">\
             <img id="t_fr" src="img/bg/sinevir/t_fr.png" alt="sinevir">\
             <img id="trees" src="img/bg/sinevir/trees.png" alt="sinevir">\
-            <img id="eagel" src="img/bg/sinevir/eagel.png" alt="sinevir">\
-            <img id="blick" src="img/bg/sinevir/blick.png" alt="sinevir">';
+            <img id="eagel" src="img/bg/sinevir/eagel.png" alt="sinevir">';
     $('#hidden-box').append(sinevir_imgs);
 };
 

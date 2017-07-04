@@ -67,12 +67,11 @@ function scrollParallax() {
 	var mt4 = Math.min(s3t + s3h - sTop - 300, 0);
 	var pwt = mt4*0.6 + 'px';
 	mt4 = mt4 + 'px';
-	console.log(mt4);
+	
 	$s4.css({
 		'marginTop': mt4
 	});
 
-	console.log(mt4);
 	$('.price-wrap').css({
 		'top': pwt
 	});
